@@ -1,8 +1,14 @@
 pipeline {
     agent {
-           sh 'echo "start pipeline now"'
+	any {
     }
     stages {
+
+	stage(checkout){
+	    steps {
+		sh 'echo "checkout successfully thru token"'
+	}
+	}	
         stage('Build') { 
             steps {
                 sh 'mvn -B -DskipTests clean package' 
