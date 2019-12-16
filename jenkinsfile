@@ -1,6 +1,6 @@
 pipeline {
     agent {
-           sh 'echo start pipeline now'
+           sh 'echo "start pipeline now"'
     }
     stages {
         stage('Build') { 
