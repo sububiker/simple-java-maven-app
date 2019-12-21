@@ -11,8 +11,6 @@ pipeline {
 	}	
         stage('Build') { 
             steps {
-	    	sh 'pwd'
-		sh 'mvn -version' 
                 sh '/Applications/apache-maven-3.6.3/bin/mvn -version' 
             }
         }
