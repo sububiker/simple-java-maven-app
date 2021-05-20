@@ -14,5 +14,12 @@ pipeline {
                 sh '/Applications/apache-maven-3.6.3/bin/mvn -version' 
             }
         }
+	    
+	stage('Slack it'){
+            steps {
+                slackSend channel: '#devops', 
+                          message: 'Hello, world'
+            }
+        }
     }
 }
