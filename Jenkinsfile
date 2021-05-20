@@ -11,14 +11,14 @@ pipeline {
 	}	
         stage('Build') { 
             steps {
-                sh '/Applications/apache-maven-3.6.3/bin/mvn -version' 
+                sh 'echo "build successfully thru mvn"' 
             }
         }
 	    
 	stage('Slack it'){
             steps {
                 slackSend channel: '#devops', 
-                          message: 'Hello, world'
+                          message: 'Hello, bitOrions'
             }
         }
     }
